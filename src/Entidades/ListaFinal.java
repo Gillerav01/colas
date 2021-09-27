@@ -57,7 +57,7 @@ public class ListaFinal {
         Nodo aux = prim;
 
         while (aux != null) {
-            System.out.println(aux.getInfo());
+            System.out.print(aux.getInfo() + " ");
             aux = aux.getSig();
         }
     }
@@ -85,7 +85,6 @@ public class ListaFinal {
     }
 
     public void borrarPrimero() {
-
         if (!this.esVacia()) {
             this.prim = prim.getSig();
         }
@@ -97,6 +96,36 @@ public class ListaFinal {
             x = prim.getInfo();
         }
         return x;
+    }
+    
+    public void concatenar(ListaFinal lf) {
+        Nodo aux = lf.prim;
+        while (aux != null) {
+            this.addFin(aux.getInfo());
+            aux = aux.getSig();
+        }
+    }
+    
+    public int length () {
+        int ret = 0;
+        Nodo aux = this.prim;
+        
+        while (aux != null) {
+            ret++;
+            aux = aux.getSig();
+        }
+        return ret;
+    }
+    
+    public void reverse () {
+        int i = 0;
+        ListaFinal l = this;
+        int longitud = this.length();
+        while (i < longitud){
+            this.addFin(this.getPrim().getInfo());
+            this.borrarPrimero();
+            i++;
+        }
     }
 
 }

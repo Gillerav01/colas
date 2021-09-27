@@ -25,9 +25,7 @@ public class Iterador {
     public void setActual(Nodo actual) {
         this.actual = actual;
     }
-    
-    // boolean hasNext, Nodo next, int dameValor
-    
+        
     public boolean hasNext (){
         return actual != null;
     }

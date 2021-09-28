@@ -238,14 +238,8 @@ public class Main {
                     lf.add(3);
                     lf.add(4);
                     lf.add(5);
-                    System.out.println("--------------------------");
                     lf.leer();
-                    System.out.println("--------------------------");
                     lf.reverse();
                     lf.leer();
-                    System.out.println("--------------------------");
-                    
-
-
     }
 }

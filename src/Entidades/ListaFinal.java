@@ -55,7 +55,7 @@ public class ListaFinal {
 
     public void leer() {
         Nodo aux = prim;
-
+        System.out.println("\n" + "--------------------------");
         while (aux != null) {
             System.out.print(aux.getInfo() + " ");
             aux = aux.getSig();
@@ -118,13 +118,13 @@ public class ListaFinal {
     }
     
     public void reverse () {
-        int i = 0;
         ListaFinal l = this;
-        int longitud = this.length();
-        while (i < longitud){
-            this.addFin(this.getPrim().getInfo());
-            this.borrarPrimero();
-            i++;
+        Nodo aux = l.getPrim();
+        this.prim = null;
+        this.fin = null;
+        while (aux != null) {
+           this.add(aux.getInfo());
+           aux = aux.getSig();
         }
     }
 
